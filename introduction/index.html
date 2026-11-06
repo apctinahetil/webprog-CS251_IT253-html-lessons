@@ -1,7 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <!-- HEAD ELEMENT: title, meta, and style live here -->
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta name="author" content="Martina Mae Trisha N. Hetil">
@@ -18,11 +17,9 @@
       line-height: 1.7;
     }
 
-    /* class attribute selectors */
     .star { color: #f2b705; }
-    .section {
-      margin-top: 36px;
-    }
+    .center { text-align: center; }
+    .section { margin-top: 36px; }
     .section h2 {
       color: #333333;
       border-bottom: 2px solid #f6d365;
@@ -37,15 +34,10 @@
       border-left: 4px solid #f2b705;
       padding: 12px 18px;
     }
-    .center { text-align: center; }
 
-    /* id attribute selector */
     #top h1 { margin-bottom: 4px; }
 
-    table {
-      border-collapse: collapse;
-      width: 100%;
-    }
+    table { border-collapse: collapse; width: 100%; }
     th, td {
       border: 1px solid #f0e1a8;
       padding: 8px 12px;
@@ -56,39 +48,55 @@
     a { color: #b8860b; }
 
     img { max-width: 100%; height: auto; }
-    .small-pic { width: 220px; }
-    .large-pic { width: 100%; max-width: 520px; }
+
+    /* pic1: sits beside the About Me text, edges fade into the white background */
+    .about-pic {
+      float: right;
+      width: 220px;
+      margin: 0 0 10px 20px;
+      -webkit-mask-image: radial-gradient(ellipse at center, #000 55%, transparent 100%);
+      mask-image: radial-gradient(ellipse at center, #000 55%, transparent 100%);
+    }
+
+    /* pic2: large photo below hobbies */
+    .large-pic {
+      display: block;
+      width: 100%;
+      max-width: 700px;
+      margin: 0 auto;
+    }
+
+    .clear { clear: both; }
   </style>
 </head>
 
 <body>
 
-  <!-- DIV ELEMENT + ID ATTRIBUTE -->
   <div id="top" class="center">
     <h1><span class="star">&#9733;</span> Personal Profile Web Page <span class="star">&#9733;</span></h1>
     <p>Martina Mae Trisha N. Hetil &bull; "Tina"</p>
-
-    <!-- HTML LINKS (anchors to ids on this page) -->
     <p>
       <a href="#about">About</a> |
       <a href="#course">Course</a> |
       <a href="#hobbies">Hobbies</a> |
-      <a href="#goals">Goals</a> |
-      <a href="#gallery">Gallery</a>
+      <a href="#gallery">Gallery</a> |
+      <a href="#goals">Goals</a>
     </p>
   </div>
 
-  <!-- ABOUT ME -->
+  <!-- ABOUT ME with pic1 -->
   <div class="section" id="about">
     <h2><span class="star">&#9733;</span> About Me</h2>
+    <img class="about-pic" src="../image/pic1.png" alt="Picture of me">
     <p>
       Hi! I'm <span class="highlight">Tina</span>, a Computer Science student based in the Philippines.
       I love combining logic and creativity, whether it's solving problems in code
       or bringing ideas to life through drawing and design. I'm also a proud cat caretaker.
     </p>
+    <div class="clear"></div>
   </div>
 
-  <!-- COURSE (HTML TABLE) -->
+  <!-- COURSE -->
   <div class="section" id="course">
     <h2><span class="star">&#9733;</span> Course</h2>
     <p>Bachelor of Science in Computer Science (BSCS)</p>
@@ -112,7 +120,7 @@
     </table>
   </div>
 
-  <!-- HOBBIES (HTML LISTS) -->
+  <!-- HOBBIES -->
   <div class="section" id="hobbies">
     <h2><span class="star">&#9733;</span> Hobbies &amp; Interests</h2>
     <ul>
@@ -121,9 +129,34 @@
       <li>Reading</li>
       <li>Taking care of cats</li>
     </ul>
+  </div>
 
+  <!-- PICTURE GALLERY: pic2 below hobbies -->
+  <div class="section" id="gallery">
+    <h2><span class="star">&#9733;</span> Picture Gallery</h2>
+    <img class="large-pic" src="../image/pic2.png" alt="My cats">
+  </div>
 
   <!-- GOALS -->
   <div class="section" id="goals">
     <h2><span class="star">&#9733;</span> Goals in Life / Dream</h2>
-    <div
+    <div class="card">
+      <p>
+        My goals are financial and mental stability, and happiness.
+        My dream is to pursue art and be able to choose the path I truly want.
+      </p>
+    </div>
+  </div>
+
+  <!-- FOOTER -->
+  <div class="section center">
+    <p>
+      <span class="star">&#9733;</span>
+      <a href="https://github.com/apctinahetil" target="_blank">My GitHub</a>
+      <span class="star">&#9733;</span>
+    </p>
+    <p><a href="#top">Back to top</a></p>
+  </div>
+
+</body>
+</html>
