@@ -4,45 +4,76 @@
 <title>Martina Mae Trisha N. Hetil - Personal Profile</title>
 <style>
   html { scroll-behavior: smooth; }
-  body { font-family: Arial, sans-serif; max-width: 700px; margin: auto; padding: 24px; background: white; color: #222; line-height: 1.6; }
+  body { font-family: Arial, sans-serif; max-width: 700px; margin: auto; padding: 24px; background: white; color: #2b2b2b; line-height: 1.7; }
 
-  /* Yellow rust texture, used for the title and all headings */
+  /* Yellow rust texture for the title and headings */
   h1, h2 {
-    font-weight: 900;
+    font-weight: 700;
     background:
-      radial-gradient(circle at 20% 30%, rgba(120, 50, 10, 0.55) 0 1px, transparent 2px) 0 0 / 7px 7px,
-      radial-gradient(circle at 70% 60%, rgba(90, 35, 5, 0.45) 0 1px, transparent 2px) 0 0 / 11px 11px,
-      radial-gradient(circle at 40% 80%, rgba(255, 220, 90, 0.7) 0 1px, transparent 2px) 0 0 / 9px 9px,
-      linear-gradient(100deg, #b7410e 0%, #d9a404 35%, #c47a0a 60%, #e0b000 100%);
+      radial-gradient(circle at 20% 30%, rgba(110, 45, 10, 0.5) 0 1px, transparent 2px) 0 0 / 7px 7px,
+      radial-gradient(circle at 70% 60%, rgba(90, 35, 5, 0.4) 0 1px, transparent 2px) 0 0 / 11px 11px,
+      linear-gradient(100deg, #b7410e 0%, #d9a404 40%, #c47a0a 65%, #e0b000 100%);
     -webkit-background-clip: text;
     background-clip: text;
     -webkit-text-fill-color: transparent;
     color: transparent;
   }
+  h1 { text-align: center; font-size: 34px; margin: 10px 0 6px; }
+  h2 { font-size: 24px; margin: 40px 0 10px; }
 
-  h1 { text-align: center; font-size: 38px; margin: 10px 0; }
-  h2 { font-size: 26px; margin-top: 36px; margin-bottom: 8px; }
+  /* Small yellow cut-paper star in front of each heading */
+  h2::before {
+    content: "✦";
+    -webkit-text-fill-color: #f2b705;
+    color: #f2b705;
+    text-shadow: 2px 2px 0 #b7410e;
+    margin-right: 8px;
+  }
 
-  /* Clickable header menu, centered and stays at the top */
+  /* Centered clickable menu, sticker style */
   .menu { position: sticky; top: 0; background: white; text-align: center; padding: 12px 0; z-index: 10; }
-  .menu a { display: inline-block; margin: 4px 6px; padding: 6px 14px; font-weight: bold; text-decoration: none; color: #222; background: #fff3c4; border-radius: 20px; }
-  .menu a:hover { background: #d9a404; color: white; }
+  .menu a {
+    display: inline-block; margin: 4px 5px; padding: 5px 14px;
+    text-decoration: none; color: #2b2b2b; font-size: 14px;
+    background: #fff3c4; border: 1px solid #d9a404;
+    box-shadow: 2px 2px 0 #b7410e;
+  }
+  .menu a:nth-child(odd) { transform: rotate(-1.5deg); }
+  .menu a:nth-child(even) { transform: rotate(1.5deg); }
+  .menu a:hover { background: #f2b705; }
 
-  strong, th { font-weight: 900; }
+  /* Photo frame: white paper edge, soft shadow, yellow tack pin */
+  .frame {
+    position: relative; background: white; padding: 8px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.18);
+  }
+  .frame::before {
+    content: ""; position: absolute; top: -8px; left: 50%; margin-left: -8px;
+    width: 16px; height: 16px; border-radius: 50%;
+    background: radial-gradient(circle at 35% 35%, #ffe680, #e0b000 60%, #b7410e);
+    box-shadow: 1px 2px 3px rgba(0, 0, 0, 0.35);
+    z-index: 2;
+  }
+  .frame img { display: block; width: 100%; height: auto; }
 
   /* About Me: text and picture each take half the width */
-  .about { display: flex; gap: 24px; align-items: center; }
+  .about { display: flex; gap: 28px; align-items: center; }
   .about .text { flex: 1; }
   .about .text p { margin: 0; }
-  .about .photo { flex: 1; text-align: center; }
-  #pic1 { width: 100%; max-width: 280px; height: auto; display: block; margin: auto; }
+  .about .photo { flex: 1; display: flex; justify-content: center; }
+  #pic1-frame { width: 100%; max-width: 250px; transform: rotate(2deg); }
 
-  #pic2 { width: 100%; height: auto; display: block; margin-top: 20px; }
+  #pic2-frame { margin-top: 24px; }
 
   table { width: 100%; border-collapse: collapse; }
-  th, td { padding: 10px; text-align: left; }
-  th { background: #fff3c4; }
-  tr:nth-child(even) td { background: #fffaf0; }
+  th, td { padding: 10px; text-align: left; border-bottom: 1px solid #f3e6b3; }
+  th { background: #fff3c4; font-weight: 700; }
+
+  ul { padding-left: 22px; }
+  li::marker { color: #d9a404; }
+
+  a { color: #b7410e; }
+  .footer { text-align: center; margin-top: 40px; font-size: 14px; }
 </style>
 </head>
 <body>
@@ -50,7 +81,6 @@
 <div id="top"></div>
 <h1>★ Personal Profile Web Page ★</h1>
 
-<!-- Clickable header menu -->
 <div class="menu">
   <a href="#about">About</a>
   <a href="#education">Education</a>
@@ -69,22 +99,24 @@
     </p>
   </div>
   <div class="photo">
-    <img id="pic1" src="../image/pic3.png" alt="Me">
+    <div class="frame" id="pic1-frame">
+      <img src="../image/pic3.png" alt="Me">
+    </div>
   </div>
 </div>
 
 <h2 id="education">Education</h2>
 <table>
   <tr><th>Level</th><th>School</th><th>Years</th></tr>
-  <tr><td><strong>Elementary</strong></td><td>Padre Burgos Elementary School</td><td>2013 - 2019</td></tr>
-  <tr><td><strong>Junior High School</strong></td><td>Pasay City National High School</td><td>2019 - 2023</td></tr>
-  <tr><td><strong>Senior High School</strong></td><td>Pasay City National High School</td><td>2023 - 2025</td></tr>
-  <tr><td><strong>College</strong></td><td>Asia Pacific College</td><td>2025 - Present</td></tr>
+  <tr><td>Elementary</td><td>Padre Burgos Elementary School</td><td>2013 - 2019</td></tr>
+  <tr><td>Junior High School</td><td>Pasay City National High School</td><td>2019 - 2023</td></tr>
+  <tr><td>Senior High School</td><td>Pasay City National High School</td><td>2023 - 2025</td></tr>
+  <tr><td>College</td><td>Asia Pacific College</td><td>2025 - Present</td></tr>
 </table>
 
 <h2 id="course">Course</h2>
 <p>
-<strong>Bachelor of Science in Computer Science (BSCS)</strong><br>
+Bachelor of Science in Computer Science (BSCS)<br>
 First Year: 2025 &bull; Currently Second Year: 2026
 </p>
 
@@ -96,15 +128,17 @@ First Year: 2025 &bull; Currently Second Year: 2026
   <li>Taking care of cats</li>
 </ul>
 
-<img id="pic2" src="../image/pic2.png" alt="My cats">
+<div class="frame" id="pic2-frame">
+  <img src="../image/pic2.png" alt="My cats">
+</div>
 
 <h2 id="goals">Goals in Life / Dream</h2>
 <p>
-My goals are <strong>financial and mental stability, and happiness</strong>.
-My dream is to <strong>pursue art</strong> and be able to choose the path I truly want.
+My goals are financial and mental stability, and happiness.
+My dream is to pursue art and be able to choose the path I truly want.
 </p>
 
-<p style="text-align:center;"><a href="#top">Back to top</a> | <a href="https://github.com/apctinahetil">My GitHub</a></p>
+<p class="footer"><a href="#top">Back to top</a> | <a href="https://github.com/apctinahetil">My GitHub</a></p>
 
 </body>
 </html>
