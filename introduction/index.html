@@ -1,43 +1,137 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-<title>Martina Mae Trisha N. Hetil - Personal Profile</title>
+  <!-- HEAD ELEMENT: title, meta, and style live here -->
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="author" content="Martina Mae Trisha N. Hetil">
+  <title>Martina Mae Trisha N. Hetil - Personal Profile</title>
+
+  <style>
+    body {
+      background: #ffffff;
+      color: #333333;
+      font-family: Arial, Helvetica, sans-serif;
+      max-width: 760px;
+      margin: 0 auto;
+      padding: 32px 20px;
+      line-height: 1.7;
+    }
+
+    /* class attribute selectors */
+    .star { color: #f2b705; }
+    .section {
+      margin-top: 36px;
+    }
+    .section h2 {
+      color: #333333;
+      border-bottom: 2px solid #f6d365;
+      padding-bottom: 6px;
+    }
+    .highlight {
+      background: #fff6d6;
+      padding: 0 6px;
+    }
+    .card {
+      background: #fffaf0;
+      border-left: 4px solid #f2b705;
+      padding: 12px 18px;
+    }
+    .center { text-align: center; }
+
+    /* id attribute selector */
+    #top h1 { margin-bottom: 4px; }
+
+    table {
+      border-collapse: collapse;
+      width: 100%;
+    }
+    th, td {
+      border: 1px solid #f0e1a8;
+      padding: 8px 12px;
+      text-align: left;
+    }
+    th { background: #fff6d6; }
+
+    a { color: #b8860b; }
+
+    img { max-width: 100%; height: auto; }
+    .small-pic { width: 220px; }
+    .large-pic { width: 100%; max-width: 520px; }
+  </style>
 </head>
+
 <body>
 
-<h1>Personal Profile Web Page</h1>
+  <!-- DIV ELEMENT + ID ATTRIBUTE -->
+  <div id="top" class="center">
+    <h1><span class="star">&#9733;</span> Personal Profile Web Page <span class="star">&#9733;</span></h1>
+    <p>Martina Mae Trisha N. Hetil &bull; "Tina"</p>
 
-<h2>About Me</h2>
-<p>
-Hi! I'm Tina, a Computer Science student based in the Philippines.
-I love combining logic and creativity, whether it's solving problems in code
-or bringing ideas to life through drawing and design. I'm also a proud cat caretaker.
-</p>
+    <!-- HTML LINKS (anchors to ids on this page) -->
+    <p>
+      <a href="#about">About</a> |
+      <a href="#course">Course</a> |
+      <a href="#hobbies">Hobbies</a> |
+      <a href="#goals">Goals</a> |
+      <a href="#gallery">Gallery</a>
+    </p>
+  </div>
 
-<h2>Course</h2>
-<p>
-Bachelor of Science in Computer Science (BSCS)<br>
-</p>
+  <!-- ABOUT ME -->
+  <div class="section" id="about">
+    <h2><span class="star">&#9733;</span> About Me</h2>
+    <p>
+      Hi! I'm <span class="highlight">Tina</span>, a Computer Science student based in the Philippines.
+      I love combining logic and creativity, whether it's solving problems in code
+      or bringing ideas to life through drawing and design. I'm also a proud cat caretaker.
+    </p>
+  </div>
 
-<h2>Hobbies &amp; Interests</h2>
-<ul>
-  <li>Traditional and digital drawing (ibisPaint X)</li>
-  <li>Design and digital art</li>
-  <li>Reading</li>
-  <li>Taking care of cats</li>
-</ul>
+  <!-- COURSE (HTML TABLE) -->
+  <div class="section" id="course">
+    <h2><span class="star">&#9733;</span> Course</h2>
+    <p>Bachelor of Science in Computer Science (BSCS)</p>
 
-<h2>Goals in Life / Dream</h2>
-<p>
-My goals are financial and mental stability, and happiness.
-My dream is to pursue art and be able to choose the path I truly want.
-</p>
+    <table>
+      <tr>
+        <th>Level</th>
+        <th>School</th>
+        <th>Status</th>
+      </tr>
+      <tr>
+        <td>Senior High School</td>
+        <td>Pasay City National High School</td>
+        <td>Completed</td>
+      </tr>
+      <tr>
+        <td>College</td>
+        <td>BS Computer Science</td>
+        <td>Second year</td>
+      </tr>
+    </table>
+  </div>
 
-<h2>Picture Gallery</h2>
-<p>
-<img src="../image/pic1.png" alt="My picture 1" width="300">
-<img src="../image/pic2.png" alt="My picture 2" width="300">
-</p>
+  <!-- HOBBIES (HTML LISTS) -->
+  <div class="section" id="hobbies">
+    <h2><span class="star">&#9733;</span> Hobbies &amp; Interests</h2>
+    <ul>
+      <li>Traditional and digital drawing (ibisPaint X)</li>
+      <li>Design and digital art</li>
+      <li>Reading</li>
+      <li>Taking care of cats</li>
+    </ul>
 
-</body>
-</html>
+    <p>Subjects I'm learning:</p>
+    <ol>
+      <li>Data Structures</li>
+      <li>Algorithms</li>
+      <li>Discrete Mathematics</li>
+      <li>Web Programming</li>
+    </ol>
+  </div>
+
+  <!-- GOALS -->
+  <div class="section" id="goals">
+    <h2><span class="star">&#9733;</span> Goals in Life / Dream</h2>
+    <div
