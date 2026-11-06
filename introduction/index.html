@@ -3,11 +3,32 @@
 <head>
 <title>Martina Mae Trisha N. Hetil - Personal Profile</title>
 <style>
-  body { font-family: Arial, sans-serif; max-width: 700px; margin: auto; padding: 24px; background: white; color: #333; line-height: 1.6; }
+  html { scroll-behavior: smooth; }
+  body { font-family: Arial, sans-serif; max-width: 700px; margin: auto; padding: 24px; background: white; color: #222; line-height: 1.6; }
 
-  h1 { text-align: center; font-size: 32px; margin-bottom: 10px; }
-  h2 { border-bottom: 2px solid gold; padding-bottom: 4px; margin-top: 32px; }
-  .star { color: gold; }
+  /* Yellow rust texture, used for the title and all headings */
+  h1, h2 {
+    font-weight: 900;
+    background:
+      radial-gradient(circle at 20% 30%, rgba(120, 50, 10, 0.55) 0 1px, transparent 2px) 0 0 / 7px 7px,
+      radial-gradient(circle at 70% 60%, rgba(90, 35, 5, 0.45) 0 1px, transparent 2px) 0 0 / 11px 11px,
+      radial-gradient(circle at 40% 80%, rgba(255, 220, 90, 0.7) 0 1px, transparent 2px) 0 0 / 9px 9px,
+      linear-gradient(100deg, #b7410e 0%, #d9a404 35%, #c47a0a 60%, #e0b000 100%);
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+    color: transparent;
+  }
+
+  h1 { text-align: center; font-size: 38px; margin: 10px 0; }
+  h2 { font-size: 26px; margin-top: 36px; margin-bottom: 8px; }
+
+  /* Clickable header menu, centered and stays at the top */
+  .menu { position: sticky; top: 0; background: white; text-align: center; padding: 12px 0; z-index: 10; }
+  .menu a { display: inline-block; margin: 4px 6px; padding: 6px 14px; font-weight: bold; text-decoration: none; color: #222; background: #fff3c4; border-radius: 20px; }
+  .menu a:hover { background: #d9a404; color: white; }
+
+  strong, th { font-weight: 900; }
 
   /* About Me: text and picture each take half the width */
   .about { display: flex; gap: 24px; align-items: center; }
@@ -19,19 +40,30 @@
   #pic2 { width: 100%; height: auto; display: block; margin-top: 20px; }
 
   table { width: 100%; border-collapse: collapse; }
-  th, td { border: 1px solid gold; padding: 8px; text-align: left; }
-  th { background: #fff6d6; }
+  th, td { padding: 10px; text-align: left; }
+  th { background: #fff3c4; }
+  tr:nth-child(even) td { background: #fffaf0; }
 </style>
 </head>
 <body>
 
-<h1><span class="star">★</span> Personal Profile Web Page <span class="star">★</span></h1>
+<div id="top"></div>
+<h1>★ Personal Profile Web Page ★</h1>
 
-<h2>About Me</h2>
+<!-- Clickable header menu -->
+<div class="menu">
+  <a href="#about">About</a>
+  <a href="#education">Education</a>
+  <a href="#course">Course</a>
+  <a href="#hobbies">Hobbies</a>
+  <a href="#goals">Goals</a>
+</div>
+
+<h2 id="about">About Me</h2>
 <div class="about">
   <div class="text">
     <p>
-    Hi! I'm Tina, a Computer Science student based in the Philippines.
+    Hi! I'm <strong>Tina</strong>, a Computer Science student based in the Philippines.
     I love combining logic and creativity, whether it's solving problems in code
     or bringing ideas to life through drawing and design. I'm also a proud cat caretaker.
     </p>
@@ -41,22 +73,22 @@
   </div>
 </div>
 
-<h2>Education</h2>
+<h2 id="education">Education</h2>
 <table>
   <tr><th>Level</th><th>School</th><th>Years</th></tr>
-  <tr><td>Elementary</td><td>Padre Burgos Elementary School</td><td>2013 - 2019</td></tr>
-  <tr><td>Junior High School</td><td>Pasay City National High School</td><td>2019 - 2023</td></tr>
-  <tr><td>Senior High School</td><td>Pasay City National High School</td><td>2023 - 2025</td></tr>
-  <tr><td>College</td><td>Asia Pacific College</td><td>2025 - Present</td></tr>
+  <tr><td><strong>Elementary</strong></td><td>Padre Burgos Elementary School</td><td>2013 - 2019</td></tr>
+  <tr><td><strong>Junior High School</strong></td><td>Pasay City National High School</td><td>2019 - 2023</td></tr>
+  <tr><td><strong>Senior High School</strong></td><td>Pasay City National High School</td><td>2023 - 2025</td></tr>
+  <tr><td><strong>College</strong></td><td>Asia Pacific College</td><td>2025 - Present</td></tr>
 </table>
 
-<h2>Course</h2>
+<h2 id="course">Course</h2>
 <p>
-Bachelor of Science in Computer Science (BSCS)<br>
+<strong>Bachelor of Science in Computer Science (BSCS)</strong><br>
 First Year: 2025 &bull; Currently Second Year: 2026
 </p>
 
-<h2>Hobbies &amp; Interests</h2>
+<h2 id="hobbies">Hobbies &amp; Interests</h2>
 <ul>
   <li>Traditional and digital drawing (ibisPaint X)</li>
   <li>Design and digital art</li>
@@ -66,13 +98,13 @@ First Year: 2025 &bull; Currently Second Year: 2026
 
 <img id="pic2" src="../image/pic2.png" alt="My cats">
 
-<h2>Goals in Life / Dream</h2>
+<h2 id="goals">Goals in Life / Dream</h2>
 <p>
-My goals are financial and mental stability, and happiness.
-My dream is to pursue art and be able to choose the path I truly want.
+My goals are <strong>financial and mental stability, and happiness</strong>.
+My dream is to <strong>pursue art</strong> and be able to choose the path I truly want.
 </p>
 
-<p><a href="https://github.com/apctinahetil">My GitHub</a></p>
+<p style="text-align:center;"><a href="#top">Back to top</a> | <a href="https://github.com/apctinahetil">My GitHub</a></p>
 
 </body>
 </html>
