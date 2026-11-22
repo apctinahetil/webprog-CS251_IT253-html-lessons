@@ -34,7 +34,6 @@ body {
   margin: 0 -90px;
   padding: 18px 90px;
   background: #f2b705;
-  box-shadow: 0 3px 8px rgba(128, 0, 0, 0.25);
 }
 
 .chip {
@@ -45,7 +44,6 @@ body {
   padding: 8px 16px;
   background: #fffaf0;
   border-radius: 12px;
-  box-shadow: 0 2px 6px rgba(128, 0, 0, 0.2);
   font-size: 13px;
   text-align: center;
 }
@@ -55,10 +53,6 @@ body {
   letter-spacing: 1px;
   text-transform: uppercase;
   color: #b8860b;
-}
-
-.chip strong {
-  font-size: 13px;
 }
 
 .hero {
@@ -87,7 +81,6 @@ body {
   flex-wrap: wrap;
   justify-content: center;
   gap: 8px;
-  padding: 10px 0;
 }
 
 .menu a {
@@ -97,22 +90,11 @@ body {
   color: #800000;
   background: #fff1b8;
   border-radius: 25px;
-  transition: all 0.2s;
 }
 
 .menu a:hover {
   background: #800000;
   color: #fffaf0;
-}
-
-.banner {
-  width: 100%;
-  padding: 10px;
-  background: #fffaf0;
-  border-top: 2px solid #f2b705;
-  border-bottom: 2px solid #f2b705;
-  font-size: 13px;
-  letter-spacing: 1px;
 }
 
 .page {
@@ -129,7 +111,6 @@ body {
   background: #fffaf0;
   border: 1px solid #f3e6b3;
   border-radius: 14px;
-  box-shadow: 0 3px 10px rgba(128, 0, 0, 0.12);
 }
 
 .wide {
@@ -157,12 +138,12 @@ body {
   align-items: center;
 }
 
-.profile img {
+.profile img,
+.gallery img {
   display: block;
   width: 100%;
   height: auto;
   border-radius: 12px;
-  box-shadow: 0 4px 12px rgba(128, 0, 0, 0.25);
 }
 
 .edu-grid {
@@ -176,15 +157,11 @@ body {
   background: white;
   border-left: 4px solid #f2b705;
   border-radius: 8px;
+  font-size: 14px;
 }
 
 .edu-item strong {
   display: block;
-  font-size: 13px;
-}
-
-.edu-item span {
-  font-size: 12px;
 }
 
 ul {
@@ -216,14 +193,6 @@ li::marker {
   align-items: center;
 }
 
-.gallery img {
-  display: block;
-  width: 100%;
-  height: auto;
-  border-radius: 12px;
-  box-shadow: 0 4px 12px rgba(128, 0, 0, 0.25);
-}
-
 .goals {
   display: grid;
   grid-template-columns: 1fr 1fr;
@@ -235,6 +204,7 @@ li::marker {
   background: white;
   border-left: 4px solid #f2b705;
   border-radius: 8px;
+  font-size: 14px;
 }
 
 a {
@@ -271,11 +241,6 @@ a {
   .wide {
     grid-column: 1;
   }
-
-  .profile img {
-    max-width: 220px;
-    margin: auto;
-  }
 }
 </style>
 </head>
@@ -300,13 +265,12 @@ a {
     <a href="#goals">Goals</a>
     <a href="#gallery">Gallery</a>
   </nav>
-  <div class="banner">★ WELCOME TO MY LITTLE CORNER OF THE WEB ★</div>
 </section>
 
 <main class="page">
 
   <section class="card wide" id="about">
-    <h2><span>★</span>1 About Me</h2>
+    <h2><span>★</span>About Me</h2>
     <div class="profile">
       <img src="../image/pic3.png" alt="Photo of Tina">
       <p>
@@ -318,17 +282,17 @@ a {
   </section>
 
   <section class="card wide" id="education">
-    <h2><span>★</span>2 Education / Achievements</h2>
+    <h2><span>★</span>Education / Achievements</h2>
     <div class="edu-grid">
-      <div class="edu-item"><strong>Elementary</strong>Padre Burgos Elementary School<br><span>2013 - 2019</span></div>
-      <div class="edu-item"><strong>Junior High School</strong>Pasay City National High School<br><span>2019 - 2023</span></div>
-      <div class="edu-item"><strong>Senior High School</strong>Pasay City National High School<br><span>2023 - 2025</span></div>
-      <div class="edu-item"><strong>College</strong>Asia Pacific College<br><span>2025 - Present</span></div>
+      <div class="edu-item"><strong>Elementary</strong>Padre Burgos Elementary School<br>2013 - 2019</div>
+      <div class="edu-item"><strong>Junior High School</strong>Pasay City National High School<br>2019 - 2023</div>
+      <div class="edu-item"><strong>Senior High School</strong>Pasay City National High School<br>2023 - 2025</div>
+      <div class="edu-item"><strong>College</strong>Asia Pacific College<br>2025 - Present</div>
     </div>
   </section>
 
   <section class="card" id="course">
-    <h2><span>★</span>3 Course</h2>
+    <h2><span>★</span>Course</h2>
     <p>
       Bachelor of Science in Computer Science (BSCS)<br>
       First Year: 2025<br>
@@ -337,7 +301,7 @@ a {
   </section>
 
   <section class="card" id="experience">
-    <h2><span>★</span>4 IT Experience</h2>
+    <h2><span>★</span>IT Experience</h2>
     <ul>
       <li>Python (data structures and command-line apps)</li>
       <li>HTML and CSS (this page!)</li>
@@ -346,7 +310,7 @@ a {
   </section>
 
   <section class="card wide" id="hobbies">
-    <h2><span>★</span>5 Hobbies &amp; Interests</h2>
+    <h2><span>★</span>Hobbies &amp; Interests</h2>
     <div class="pills">
       <span>Traditional and digital drawing (ibisPaint X)</span>
       <span>Design and digital art</span>
@@ -356,27 +320,3 @@ a {
   </section>
 
   <section class="card wide" id="goals">
-    <h2><span>★</span>6 Goals in Life / Dream</h2>
-    <div class="goals">
-      <div class="goal">My goals are financial and mental stability, and happiness.</div>
-      <div class="goal">My dream is to pursue art and be able to choose the path I truly want.</div>
-    </div>
-  </section>
-
-  <section class="card wide" id="gallery">
-    <h2><span>★</span>7 Picture Gallery</h2>
-    <div class="gallery">
-      <img src="../image/pic3.png" alt="Tina">
-      <img src="../image/pic2.png" alt="My cats">
-    </div>
-  </section>
-
-</main>
-
-<footer class="footer">
-  <a href="#top">Back to top</a>
-  <a href="https://github.com/apctinahetil">My GitHub</a>
-</footer>
-
-</body>
-</html>
